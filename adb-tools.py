@@ -7,7 +7,7 @@ sg.theme("DarkGrey6")
 
 layout = [ [sg.Text("ADBtools")],
            [sg.Text('')],
-           [sg.Text("Run commands"), sg.Button("adb devices"), ],
+           [sg.Text("Run commands:"), sg.Button("adb devices"), ],
            [sg.Text("Custom ADB command:"), sg.Text("adb"), sg.InputText(), sg.Button("Send")],
            [sg.Button("Close ADBtools")] ]
 
@@ -25,8 +25,7 @@ window = sg.Window("ADBtools", layout, margins=(25,25))
 # create loop
 while True:
     event, values = window.read()
-    # End program if user closes window or
-    # presses the OK button
+    
     if event == "adb devices":
         os.chdir("adb")
         os.system("adb devices")
