@@ -11,8 +11,6 @@ layout = [ [sg.Text("ADBtools")],
            [sg.Text("Custom ADB command:"), sg.Text("adb"), sg.InputText(), sg.Button("Send")],
            [sg.Button("Close ADBtools")] ]
 
-
-
 # add explanation
 
 print("This is the output window.")
