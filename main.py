@@ -8,8 +8,8 @@ sg.theme("DarkGrey6")
 layout = [ [sg.Text("ADBtools")],
            [sg.Text('')],
            [sg.Text("Run commands"), sg.Button("adb devices"), ],
-           [sg.Text("Custom adb command:"), sg.Text("adb"), sg.InputText(), sg.Button("Send")],
-           [sg.Button("close ADBtools")] ]
+           [sg.Text("Custom ADB command:"), sg.Text("adb"), sg.InputText(), sg.Button("Send")],
+           [sg.Button("Close ADBtools")] ]
 
 
 
