@@ -18,7 +18,7 @@ print("Everything that would normally be printed into a terminal goes here.")
 print('')
 
 # create window
-window = sg.Window("ADBtools", layout, margins=(25,25))
+window = sg.Window("ADBtools", layout, element_justification='c', margins=(25,25))
 
 # create loop
 while True:
