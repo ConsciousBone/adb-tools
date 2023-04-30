@@ -14,7 +14,8 @@ layout = [ [sg.Text("ADBtools")],
            [sg.Text('')],
            [sg.Text("Custom ADB command:"), sg.Text("adb"), sg.InputText(), sg.Button("Send")],
            [sg.Text('')],
-           [sg.Button("Close ADBtools")] ]
+           [sg.Button("Close ADBtools")],
+           [sg.Text("Made by ConsciousBone and ChatGPT")] ]
 
 # add explanation
 
@@ -35,15 +36,21 @@ while True:
     if event == "adb devices":
         os.system("adb.exe devices")
 
+    elif event == "adb reboot":
+        os.system("adb.exe reboot")
+
+    elif event == "adb reboot bootloader":
+        os.system("adb.exe reboot bootloader")
+
+    elif event == "Install":
+        os.system("adb.exe install " + values[0])
+
+    elif event == "Send":
+        os.system("adb.exe " + values[1])
+
     elif event == "close ADBtools":
         print("ADBtools closed")
         break
-
-    elif event == "Send":
-        os.system("adb.exe install " + values[1])
-
-    elif event == "Install":
-        os.system("adb.exe " + values[0])
 
     elif event == sg.WIN_CLOSED:
         print("ADBtools closed")
