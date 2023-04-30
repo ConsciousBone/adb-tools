@@ -33,6 +33,7 @@ while True:
         break
 
     elif event == "Send":
+        os.chdir("adb")
         os.system("adb " + values[0])
 
     elif event == sg.WIN_CLOSED:
