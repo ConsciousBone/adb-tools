@@ -25,7 +25,7 @@ window = sg.Window("ADBtools", layout, margins=(25,25))
 # create loop
 while True:
     event, values = window.read()
-    
+
     if event == "adb devices":
         os.chdir("adb")
         os.system("adb devices")
@@ -33,6 +33,9 @@ while True:
     elif event == "close ADBtools":
         print("ADBtools closed")
         break
+
+    elif event == "Send":
+        os.system("adb " + values[0])
 
     elif event == sg.WIN_CLOSED:
         print("ADBtools closed")
