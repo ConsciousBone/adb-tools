@@ -4,9 +4,11 @@ import PySimpleGUI as sg
 import os
 
 layout = [ [sg.Text("ADBtools")],
-           [sg.Button("adb devices"), sg.Button("close")] ]
+           [sg.Text("Run commands"), sg.Button("adb devices"), ],
+           [sg.Text("Custom adb command:"), sg.Text("adb"), sg.InputText()],
+           [sg.Button("close ADBtools")] ]
 
-sg.theme("Dark Grey 6")
+sg.theme("DarkGrey2")
 
 # add explanation
 
@@ -26,7 +28,7 @@ while True:
         os.chdir("adb")
         os.system("adb devices")
 
-    elif event == "close":
+    elif event == "close ADBtools":
         break
 
     elif event == sg.WIN_CLOSED:
