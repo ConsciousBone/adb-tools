@@ -7,8 +7,13 @@ sg.theme("DarkGrey6")
 
 layout = [ [sg.Text("ADBtools")],
            [sg.Text('')],
-           [sg.Text("Run commands:"), sg.Button("adb devices"), ],
+           [sg.Text("Run commands:"), sg.Button("adb devices"), sg.Button("adb reboot"), sg.Button("adb reboot bootloader")],
+           [sg.Text('')],
+           [sg.Text("Install:"), sg.Text("adb install"), sg.InputText(), sg.Button("Install")],
+           [sg.Text("Input file path of .apk file")],
+           [sg.Text('')],
            [sg.Text("Custom ADB command:"), sg.Text("adb"), sg.InputText(), sg.Button("Send")],
+           [sg.Text('')],
            [sg.Button("Close ADBtools")] ]
 
 # add explanation
@@ -35,6 +40,9 @@ while True:
         break
 
     elif event == "Send":
+        os.system("adb.exe install " + values[1])
+
+    elif event == "Install":
         os.system("adb.exe " + values[0])
 
     elif event == sg.WIN_CLOSED:
