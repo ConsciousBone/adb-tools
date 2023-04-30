@@ -47,6 +47,7 @@ while True:
         os.system("adb.exe reboot bootloader")
 
     elif event == "Install":
+        print("Attempting install: the GUI could stop responding, do not close it!")
         os.system('adb.exe install "' + values[0] + '"')
 
     elif event == "Send":
