@@ -3,12 +3,15 @@
 import PySimpleGUI as sg
 import os
 
+sg.theme("DarkGrey2")
+
 layout = [ [sg.Text("ADBtools")],
+           [sg.Text('')],
            [sg.Text("Run commands"), sg.Button("adb devices"), ],
            [sg.Text("Custom adb command:"), sg.Text("adb"), sg.InputText()],
            [sg.Button("close ADBtools")] ]
 
-sg.theme("DarkGrey2")
+
 
 # add explanation
 
