@@ -3,7 +3,9 @@
 import PySimpleGUI as sg
 import os
 
-layout = [[sg.Text("ADBtools")], [sg.Button("adb devices")], [sg.Button("close")]]
+layout = [ [sg.Text("ADBtools")],
+           [sg.Button("adb devices"), sg.Button("close")] ]
+
 sg.theme("Dark Grey 6")
 
 # add explanation
